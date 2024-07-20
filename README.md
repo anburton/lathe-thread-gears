@@ -13,6 +13,7 @@ Mini Lathe Machine 2250 PRM Variable Speed Change, Precision Mini Lathe 650W Met
 The Gears on this lathe are set up differently and only have 4 gears that can be changed.
 The Lead Screw is Gear D in the Thread Cutting Tables on the Lathe is gears_used[0] in the gear_ratio formula
 Gear C = gears_used[1], etc. up to Gear A = gears_used[3]
+![](img/ppt.jpeg)
 
 To use this program with this lathe the gear_ratio formula needs to change.
 Gear A is set up to follow the splindle speed
@@ -26,6 +27,7 @@ Since this is a compond gear with Post 1 shared by Gear C and Gear B the two rat
 
 gear_ratio = gears_used[3]/gears_used[2]*gears_used[1]/gears_used[0]
 
+![](img/table.jpeg)
 My Vevor mini lathe came with a table printed on the cover showing
 which gears to place on which post to configure the lathe for common
 Metric and Imperial thread pitches. However, these listed gears that
