@@ -1,6 +1,6 @@
 # Mini lathe arbritrary thread gearing calculator
 
-![](img/Vevor8x14gearsAll.jpg)
+![](img/Vevor8x14gearsAll.jpeg)
 
 On cheap mini lathes, for threading different pitches of gears, rather
 than having a gearbox with some gear selector, one has to place
@@ -18,7 +18,7 @@ To use this program with this lathe the gear_ratio formula needs to change.
 Gear A is set up to follow the splindle speed
 Gear A is attached to a shaft that has a 45 tooth gear connected via the reverse control to the spindles 45 tooth gear
 since Input# teath = Output # of teath the gear ratio is 1 and we don't have to consider this in our gear_ratio formula
-![](img/Vevor8x14gears.jpg)
+![](img/Vevor8x14gears.jpeg)
 
 The % speed reduction from Gear A to Gear B is Gear A/Gear B or gears_used[3]/gears_used[2]
 Likewise the % speed reduction from Gear C to Gear D is Gear C/Gear D or  gears_used[1]/ gears_used[0]
