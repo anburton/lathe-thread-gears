@@ -27,11 +27,9 @@ The % speed reduction from Gear A to Gear B is Gear A/Gear B or gears_used[3]/ge
 Likewise the % speed reduction from Gear C to Gear D is Gear C/Gear D or  gears_used[1]/ gears_used[0]
 Since this is a compond gear with Post 1 shared by Gear C and Gear B the two ratios are multiplied resulting in gear_ration formula below
 
+gear_ratio = gears_used[3]/gears_used[2]*gears_used[1]/gears_used[0]
 ![](img/gearnm.jpg)
 
-gear_ratio = gears_used[3]/gears_used[2]*gears_used[1]/gears_used[0]
-
-![](img/table.jpeg)
 My Vevor mini lathe came with a table printed on the cover showing
 which gears to place on which post to configure the lathe for common
 Metric and Imperial thread pitches. However, these listed gears that
@@ -43,8 +41,9 @@ table. But my values disagreed. After much investigation, I realized
 the included threading table was very inaccurate, to the point of
 being practically useless for imperial threads.\
 
+![](img/table.jpeg)
 # Trying all gear combinations
-
+![](img/Vevor8x14gearsAll.jpeg)
 **Watch my video about this: <https://youtu.be/sYw7OfeC1b8>**
 
 To figure out what the *best* gears are for different pitches, I
@@ -125,7 +124,6 @@ Gear threading table, Lead screw gear first, gear engaging spindle last
 Total gear combinations (including duplicates): 35366
 Total gear ratios: 3342
 
-![](img/Vevor8x14gearsAll.jpeg)
 
 This indicates:
 
