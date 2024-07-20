@@ -61,6 +61,51 @@ four gears that you can swap, you will have to modify the code in the
 script also.
 
 Output from the program looks like this:
+Gear threading table, Lead screw gear first, gear engaging spindle last
+'E=' indicates % error from target pitch value
+
+  0.5000,  40,   30, 45,   20,  E= 0.000%
+-------- 0.5 mm --------
+  0.5013,  84,   80, 57,   20,  E= 0.260%
+
+  0.7000,  45,   30, 50,   35,  E= 0.000%
+-------- 0.7 mm --------
+  0.7010,  80,   54, 65,   45,  E= 0.143%
+
+  0.8000,  40,   48, 45,   20,  E= 0.000%
+-------- 0.8 mm --------
+  0.8016,  80,   57, 72,   54,  E= 0.200%
+
+  1.0000,  30,  Any,Any,   20,  E= 0.000%
+-------- 1 mm --------
+  1.0020,  80,   57, 48,   45,  E= 0.200%
+
+  1.5000,  25,   50, 40,   20,  E= 0.000%
+-------- 1.5 mm --------
+  1.5033,  65,   57, 35,   40,  E= 0.220%
+
+  1.7500,  30,   84, 48,   20,  E= 0.000%
+-------- 1.75 mm --------
+  1.7532,  55,   50, 35,   45,  E= 0.183%
+
+  2.0000,  20,   48, 45,   25,  E= 0.000%
+-------- 2 mm --------
+  2.0039,  48,   57, 40,   45,  E= 0.195%
+
+  2.5000,  20,   40, 30,   25,  E= 0.000%
+-------- 2.5 mm --------
+  2.5071,  84,   65, 25,   54,  E= 0.284%
+
+  3.0000,  20,   48, 30,   25,  E= 0.000%
+-------- 3 mm --------
+  3.0066,  65,   80, 35,   57,  E= 0.220%
+
+ 12.0000,  20,   50, 25,   80,  E= 0.000%
+-------- 12 mm --------
+ 12.0960,  30,   84, 25,   72,  E= 0.800%
+
+Total gear combinations (including duplicates): 35366
+Total gear ratios: 3296
 
 Gear threading table, Lead screw gear first, gear engaging spindle last
 'E=' indicates % error from target pitch value
