@@ -23,10 +23,12 @@ Gear A is attached to a shaft that has a 45 tooth gear connected via the reverse
 since Input# teath = Output # of teath the gear ratio is 1 and we don't have to consider this in our gear_ratio formula
 
 ![](img/ppt.jpeg)
-![](img/gearsnm.jpeg)
+
 The % speed reduction from Gear A to Gear B is Gear A/Gear B or gears_used[3]/gears_used[2]
 Likewise the % speed reduction from Gear C to Gear D is Gear C/Gear D or  gears_used[1]/ gears_used[0]
 Since this is a compond gear with Post 1 shared by Gear C and Gear B the two ratios are multiplied resulting in gear_ration formula below
+
+![](img/gearnm.jpg)
 
 gear_ratio = gears_used[3]/gears_used[2]*gears_used[1]/gears_used[0]
 
