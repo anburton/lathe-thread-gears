@@ -8,46 +8,23 @@ different gears on posts on the lathe to gear reduce from the lathe\'s
 spindle onto the lead screw that moves the carriage side to side.
 
 JSMNCC8X140000002V1 - VEVOR Mini Metal Lathe, 8"x14",
-# Mini Lathe Machine 2250 PRM Variable Speed Change, Precision Mini Lathe 650W Metal Working Lathe
-#
-# The Gears on this lathe are set up differently and only have 4 gears that can be changed.
-# The Lead Screw is Gear D in the Thread Cutting Tables on the Lathe is gears_used[0] in the gear_ratio formula
-# Gear C = gears_used[1], etc. up to Gear A = gears_used[3]
-#
-# To use this program with this lathe the gear_ratio formula needs to change.
-# Gear A is set up to follow the splindle speed
-# Gear A is attached to a shaft that has a 45 tooth gear connected via the reverse control to the spindles 45 tooth gear
-# since Input# teath = Output # of teath the gear ratio is 1 and we don't have to consider this in our gear_ratio formula
-#
-# The % speed reduction from Gear A to Gear B is Gear A/Gear B or gears_used[3]/gears_used[2]
-# Likewise the % speed reduction from Gear C to Gear D is Gear C/Gear D or  gears_used[1]/ gears_used[0]
-# Since this is a compond gear with Post 1 shared by Gear C and Gear B the two ratios are multiplied resulting in gear_ration formula below
-#
-# gear_ratio = gears_used[3]/gears_used[2]*gears_used[1]/gears_used[0]
-#
-#     +==+
-#     |33|
-# ====|AA|==Intermediate Post 2 = Spindle Speed
-#     |33|
-#     +==+
-#     |22|
-#     |22|
-#  +--+22|
-#  |11|22|
-# =|CC|BB|==Intermediate Post 1
-#  |11|22|
-#  +==+22|
-#  |00|22|
-#  |00|22|
-#  |00+--+
-#  |00|
-# =|DD|==Lead screw
-#  |00|
-#  |00|
-#  |00|
-#  |00|
-#  +==+
-#--------------------------------------------------------------------
+Mini Lathe Machine 2250 PRM Variable Speed Change, Precision Mini Lathe 650W Metal Working Lathe
+
+The Gears on this lathe are set up differently and only have 4 gears that can be changed.
+The Lead Screw is Gear D in the Thread Cutting Tables on the Lathe is gears_used[0] in the gear_ratio formula
+Gear C = gears_used[1], etc. up to Gear A = gears_used[3]
+
+To use this program with this lathe the gear_ratio formula needs to change.
+Gear A is set up to follow the splindle speed
+Gear A is attached to a shaft that has a 45 tooth gear connected via the reverse control to the spindles 45 tooth gear
+since Input# teath = Output # of teath the gear ratio is 1 and we don't have to consider this in our gear_ratio formula
+![](img/Vevor8x14gears.jpg)
+
+The % speed reduction from Gear A to Gear B is Gear A/Gear B or gears_used[3]/gears_used[2]
+Likewise the % speed reduction from Gear C to Gear D is Gear C/Gear D or  gears_used[1]/ gears_used[0]
+Since this is a compond gear with Post 1 shared by Gear C and Gear B the two ratios are multiplied resulting in gear_ration formula below
+
+gear_ratio = gears_used[3]/gears_used[2]*gears_used[1]/gears_used[0]
 
 My Vevor mini lathe came with a table printed on the cover showing
 which gears to place on which post to configure the lathe for common
