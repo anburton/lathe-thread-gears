@@ -14,28 +14,6 @@ The Gears on this lathe are set up differently and only have 4 gears that can be
 The Lead Screw is Gear D in the Thread Cutting Tables on the Lathe is gears_used[0] in the gear_ratio formula
 Gear C = gears_used[1], etc. up to Gear A = gears_used[3]
 
-     +==+
-     |33|
- ====|AA|==Intermediate Post 2 = Spindle Speed
-     |33|
-     +==+
-     |22|
-     |22|
-  +--+22|
-  |11|22|
- =|CC|BB|==Intermediate Post 1
-  |11|22|
-  +==+22|
-  |00|22|
-  |00|22|
-  |00+--+
-  |00|
- =|DD|==Lead screw
-  |00|
-  |00|
-  |00|
-  |00|
-  +==+
 
 ![](img/Vevor8x14gears.jpeg)
 
