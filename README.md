@@ -1,7 +1,6 @@
 # Mini lathe arbritrary thread gearing calculator
 
-![](img/Vevor8x14gearsAll.jpeg)
-
+![](img/Vevor.jpg)
 On cheap mini lathes, for threading different pitches of gears, rather
 than having a gearbox with some gear selector, one has to place
 different gears on posts on the lathe to gear reduce from the lathe\'s
@@ -126,6 +125,7 @@ Gear threading table, Lead screw gear first, gear engaging spindle last
 Total gear combinations (including duplicates): 35366
 Total gear ratios: 3342
 
+![](img/Vevor8x14gearsAll.jpeg)
 
 This indicates:
 
