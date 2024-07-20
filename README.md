@@ -1,15 +1,53 @@
 # Mini lathe arbritrary thread gearing calculator
 
-![](img/18tpi_gears.jpg)
+![](img/Vevor8x14gearsAll.jpg)
 
 On cheap mini lathes, for threading different pitches of gears, rather
 than having a gearbox with some gear selector, one has to place
 different gears on posts on the lathe to gear reduce from the lathe\'s
 spindle onto the lead screw that moves the carriage side to side.
 
-With a number of gears included in the lathe, and five gears that can
-be swapped for different gears, this opens up a *lot* of possibilities
-for different gear ratios.
+JSMNCC8X140000002V1 - VEVOR Mini Metal Lathe, 8"x14",
+# Mini Lathe Machine 2250 PRM Variable Speed Change, Precision Mini Lathe 650W Metal Working Lathe
+#
+# The Gears on this lathe are set up differently and only have 4 gears that can be changed.
+# The Lead Screw is Gear D in the Thread Cutting Tables on the Lathe is gears_used[0] in the gear_ratio formula
+# Gear C = gears_used[1], etc. up to Gear A = gears_used[3]
+#
+# To use this program with this lathe the gear_ratio formula needs to change.
+# Gear A is set up to follow the splindle speed
+# Gear A is attached to a shaft that has a 45 tooth gear connected via the reverse control to the spindles 45 tooth gear
+# since Input# teath = Output # of teath the gear ratio is 1 and we don't have to consider this in our gear_ratio formula
+#
+# The % speed reduction from Gear A to Gear B is Gear A/Gear B or gears_used[3]/gears_used[2]
+# Likewise the % speed reduction from Gear C to Gear D is Gear C/Gear D or  gears_used[1]/ gears_used[0]
+# Since this is a compond gear with Post 1 shared by Gear C and Gear B the two ratios are multiplied resulting in gear_ration formula below
+#
+# gear_ratio = gears_used[3]/gears_used[2]*gears_used[1]/gears_used[0]
+#
+#     +==+
+#     |33|
+# ====|AA|==Intermediate Post 2 = Spindle Speed
+#     |33|
+#     +==+
+#     |22|
+#     |22|
+#  +--+22|
+#  |11|22|
+# =|CC|BB|==Intermediate Post 1
+#  |11|22|
+#  +==+22|
+#  |00|22|
+#  |00|22|
+#  |00+--+
+#  |00|
+# =|DD|==Lead screw
+#  |00|
+#  |00|
+#  |00|
+#  |00|
+#  +==+
+#--------------------------------------------------------------------
 
 My Vevor mini lathe came with a table printed on the cover showing
 which gears to place on which post to configure the lathe for common
@@ -42,47 +80,68 @@ script also.
 
 Output from the program looks like this:
 
-    Gear threading table, Lead screw gear first, gear engaging spindle last
-    'E=' indicates % error from target pitch value
+Gear threading table, Lead screw gear first, gear engaging spindle last
+'E=' indicates % error from target pitch value
 
-     12.9352,  20,  Any,Any,   24, 66,  E=-0.498%
-    -------- 13 tpi --------
-     13.0256,  72,   52, 40,  Any,Any,  E= 0.197%
+  9.9818,  35,   50, 48,   57,  E=-0.182%
+-------- 10 tpi --------
+ 10.0013,  54,   80, 35,   40,  E= 0.013%
 
-     13.9700,  33,  Any,Any,   40, 72,  E=-0.214%
-    -------- 14 tpi --------
-     14.1111,  80,   80, 60,  Any,Any,  E= 0.794%
+ 10.9994,  40,   54, 57,   65,  E=-0.005%
+-------- 11 tpi --------
+ 11.0028,  80,   57, 25,   54,  E= 0.025%
 
-     15.6790,  20,  Any,Any,   24, 80,  E=-2.006%
-    -------- 16 tpi --------
-     16.1431,  66,  Any,Any,   50, 52,  E= 0.894%
+ 11.9770,  50,   54, 55,   72,  E=-0.192%
+-------- 12 tpi --------
+ 12.0073,  65,   80, 48,   55,  E= 0.061%
 
-     17.9103,  50,   52, 72,   60, 66,  E=-0.498%
-    -------- 18 tpi --------
-     18.0912,  80,   52, 50,  Any,Any,  E= 0.507%
+ 12.9993,  40,   54, 57,   55,  E=-0.005%
+-------- 13 tpi --------
+ 13.0048,  48,   50, 20,   25,  E= 0.037%
 
-     19.9003,  50,   60, 80,   52, 66,  E=-0.498%
-    -------- 20 tpi --------
-     20.0121,  60,   40, 52,   66, 72,  E= 0.061%
+ 13.9959,  45,   35, 54,   84,  E=-0.029%
+-------- 14 tpi --------
+ 14.0004,  54,   57, 48,   55,  E= 0.003%
 
-     23.8803,  66,   52, 80,  Any,Any,  E=-0.499%
-    -------- 24 tpi --------
-     24.2147,  72,   40, 52,   60, 66,  E= 0.895%
+ 15.9657,  30,   50, 55,   35,  E=-0.214%
+-------- 16 tpi --------
+ 16.0020,  84,   80, 54,   60,  E= 0.012%
 
-     27.9400,  33,  Any,Any,   20, 72,  E=-0.214%
-    -------- 28 tpi --------
-     28.2222,  80,  Any,Any,   40, 60,  E= 0.794%
+ 17.9701,  48,   84, 65,   35,  E=-0.166%
+-------- 18 tpi --------
+ 18.0066,  72,   65, 48,   50,  E= 0.037%
 
-     31.5773,  72,   52, 80,   33, 40,  E=-1.321%
-    -------- 32 tpi --------
-     32.2385,  72,   40, 66,   52, 60,  E= 0.745%
+ 19.9635,  35,   57, 48,   25,  E=-0.183%
+-------- 20 tpi --------
+ 20.0025,  84,   80, 54,   48,  E= 0.013%
 
-    Total gear combinations (including duplicates): 1876
-    Total gear ratios: 373
+ 23.9562,  84,   50, 48,   57,  E=-0.183%
+-------- 24 tpi --------
+ 24.0030,  84,   80, 54,   40,  E= 0.013%
 
-The first actual output line from above would be this:
+ 26.9551,  65,   35, 72,   84,  E=-0.166%
+-------- 27 tpi --------
+ 27.0100,  54,   65, 48,   25,  E= 0.037%
 
-    12.9352,  20,  Any,Any,   24, 66,  E=-0.498%
+ 27.9534,  48,   54, 65,   35,  E=-0.166%
+-------- 28 tpi --------
+ 28.0100,  60,   57, 55,   35,  E= 0.036%
+
+ 31.9314,  48,   35, 55,   40,  E=-0.214%
+-------- 32 tpi --------
+ 32.0040,  84,   80, 72,   40,  E= 0.012%
+
+ 39.9270,  72,   45, 84,   57,  E=-0.183%
+-------- 40 tpi --------
+ 40.0050,  84,   80, 45,   20,  E= 0.013%
+
+ 43.9012,  80,   20, 35,   54,  E=-0.225%
+-------- 44 tpi --------
+ 44.0267,  84,   60, 65,   35,  E= 0.061%
+
+Total gear combinations (including duplicates): 35366
+Total gear ratios: 3342
+
 
 This indicates:
 
