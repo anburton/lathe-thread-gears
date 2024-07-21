@@ -8,7 +8,7 @@ spindle onto the lead screw that moves the carriage side to side.
 
 JSMNCC8X140000002V1 - VEVOR Mini Metal Lathe, 8"x14",
 Mini Lathe Machine 2250 PRM Variable Speed Change, Precision Mini Lathe 650W Metal Working Lathe
-
+![](img/Vevor8x14gearsAll.jpeg)
 The Gears on this lathe are set up differently and only have 4 gears that can be changed.
 The Lead Screw is Gear D in the Thread Cutting Tables on the Lathe is gears_used[0] in the gear_ratio formula
 Gear C = gears_used[1], etc. up to Gear A = gears_used[3]
@@ -50,15 +50,14 @@ To figure out what the *best* gears are for different pitches, I
 figured its best to just try all gear combinations with a computer
 program.
 
-And this is why I wrote the python script **lathe_thread_gears.py**
+And this is why I wrote the modified python script **8x14-lathe_thread_gears.py**
 
 This is a python script that is run from the command line.
 
 Configuration for the script, such as which gears you have, metric or
 imperial, and target thread pitches are parameters at the top of the
 script. Modify these values to configure it. If your lathe has only
-four gears that you can swap, you will have to modify the code in the
-script also.
+four gears that you can swap, this is the modified the code to use it.
 
 Output from the program looks like this:
 Gear threading table, Lead screw gear first, gear engaging spindle last
