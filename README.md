@@ -25,7 +25,7 @@ since Input# teath = Output # of teath the gear ratio is 1 and we don't have to 
 
 The % speed reduction from Gear A to Gear B is Gear A/Gear B or gears_used[3]/gears_used[2]
 Likewise the % speed reduction from Gear C to Gear D is Gear C/Gear D or  gears_used[1]/ gears_used[0]
-Since this is a compond gear with Post 1 shared by Gear C and Gear B the two ratios are multiplied resulting in gear_ration formula below
+Since this is a compond gear with Post 1 shared by Gear C and Gear B the two ratios are multiplied resulting in gear_ratio formula below
 
 gear_ratio = gears_used[3]/gears_used[2]*gears_used[1]/gears_used[0]
 ![](img/gearnm.jpg)
@@ -106,7 +106,7 @@ Gear threading table, Lead screw gear first, gear engaging spindle last
 Total gear combinations (including duplicates): 35366
 Total gear ratios: 3296
 
-Gear threading table, Lead screw gear first, gear engaging spindle last
+Gear threading table, Lead screw gear first D[0], gear engaging spindle last A[3]
 'E=' indicates % error from target pitch value
 
   9.9818,  35,   50, 48,   57,  E=-0.182%
